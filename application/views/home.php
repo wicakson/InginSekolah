@@ -26,7 +26,9 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-      <link href="<?php echo base_url() ?>assets/css/carousel.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/carousel.css" rel="stylesheet">
+
+    
 
   </head>
 
@@ -52,9 +54,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="<?php echo site_url('Welcome/index')?>">Beranda</a></li>
-                <li><a href="<?php echo site_url('Welcome/donasi')?>">Donasi</a></li>
-                <li><a href="#contact">Daftarkan</a></li>
+                <li class=<?=$beranda?>><a href="<?php echo site_url('welcome')?>">Beranda</a></li>
+                <li class=<?=$donasi?>><a href="<?php echo site_url('donasi')?>">Donasi</a></li>
+                <li class=<?=$daftarkan?>><a href="#contact">Daftarkan</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Register</a></li>
@@ -96,5 +98,18 @@
     <script src="<?php echo base_url() ?>assets/js/jquery.easing.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo base_url() ?>assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <link href="<?php echo base_url() ?>assets/css/bootbar.css" rel="stylesheet">
+    <script src="<?php echo base_url() ?>assets/js/bootbar.js"></script>
+  
+
+    <!-- NOTIF AREA -->
+    <script>
+      $(document).ready(function(){
+          if ("<?=$notification?>" != '')
+            $.bootbar.success("<?=$notification?>");
+      });
+    </script>
+
   </body>
 </html>

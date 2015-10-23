@@ -21,14 +21,12 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['contains']='front';
+		$data['beranda']='active';
+		$data['donasi']='';
+		$data['daftarkan']='';
+
+		$data['notification']='';
+
 		$this->load->view('home',$data);
 	}
-
-	public function donasi()
-	{
-		$data['contains']='donasi';
-		$this->load->view('home',$data);
-	}
-
-	
 }
